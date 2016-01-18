@@ -1,0 +1,35 @@
+template(name='home')
+
+	+home_flickity
+
+	.ui-flex-row.ui-flex-center--child.ui-pdtb-lg
+		.ui-flex-column.ui-flex-1x
+			h1 {{sugarAbbr system.stats.members}}
+				small.ui-mute(style='font-size: 70%;') people
+			h4 find rich people around you
+		.ui-flex-column.ui-flex-1x
+			h1 {{sugarAbbr system.stats.activities}}
+				small.ui-mute(style='font-size: 70%;') activities
+			h4 tell the world how rich your are
+		.ui-flex-column.ui-flex-1x
+			h1 {{sugarAbbr system.stats.groups}}
+				small.ui-mute(style='font-size: 70%;') groups
+			h4 need a group tilte
+		.ui-flex-column.ui-flex-1x
+			h1 {{sugarAbbr system.stats.photos}}
+				small.ui-mute(style='font-size: 70%;') photos
+			h4 show your life style
+
+	h4.ui-padded Latest members
+
+	.ui-flex-row.ui-flex-wrap--8.ui-flex-center--child
+
+		each latestUsers 24
+
+			a.ui-flex-column.ui-padded(href='{{pathFor route="$username"}}')
+
+				img.ui-mgb.ui-circle(src='{{profile.avatarUrl}}' width='50' height='50')
+
+				small(style='font-size: 70%; white-space: nowrap;') {{displayName}}
+
+				small {{createdAtFromNow}}

@@ -1,0 +1,6 @@
+template(name='$username')
+
+	each getActivitiesByUsername user.username
+
+		h1 {{user.username}}
+		p {{content}}

@@ -1,0 +1,137 @@
+*
+	box-sizing border-box
+	margin 0
+	padding 0
+
+.ui-flex-height
+	height 100vh
+
+.ui-flex-row
+	display flex
+	flex-flow row nowrap
+	width 100%
+
+.ui-flex-column
+	display flex
+	flex-flow column nowrap
+
+.ui-flex-left--child
+	& > *
+		display flex
+		justify-content flex-start
+		align-items flex-start
+
+.ui-flex-center--child
+	& > *
+		display flex
+		justify-content center
+		align-items center
+
+.ui-flex-1x
+	flex 1
+
+.ui-flex-2x
+	flex 2
+
+.ui-flex-3x
+	flex 3
+
+.ui-flex-wrap--2
+	flex-wrap wrap
+	& > *
+		width 50%
+
+.ui-flex-wrap--3
+	flex-wrap wrap
+	& > *
+		width 33.3%
+
+.ui-flex-wrap--4
+	flex-wrap wrap
+	& > *
+		width (100/4)%
+
+.ui-flex-wrap--5
+	flex-wrap wrap
+	& > *
+		width (100/5)%
+
+.ui-flex-wrap--8
+	flex-wrap wrap
+	& > *
+		width (100/8)%
+
+.ui-flex-wrap--10
+	flex-wrap wrap
+	& > *
+		width (100/10)%
+
+// margin
+
+.ui-mgr
+	margin-right 16px
+
+.ui-mgr-md
+	margin-right 32px
+
+.ui-mgb
+	margin-bottom 16px
+
+.ui-mgb-md
+	margin-bottom 32px
+
+.ui-mgb-lg
+	margin-bottom 64px
+
+.ui-mgb-sm
+	margin-bottom 8px
+
+.ui-mgtb-lg
+	margin 64px 0
+
+// padding
+
+.ui-padded
+	padding 16px
+
+.ui-padded-xs
+	padding 4px
+
+.ui-padded-sm
+	padding 8px
+
+.ui-padded-md
+	padding 32px
+
+.ui-padded-lg
+	padding 64px
+
+.ui-pdtb-sm
+	padding 8px 0
+
+.ui-pdtb
+	padding 16px 0
+
+.ui-pdtb-md
+	padding 32px 0
+
+.ui-pdtb-lg
+	padding 64px 0
+
+// circle
+
+.ui-circle
+	border-radius 50%
+
+.ui-flex-background
+	background-repeat no-repeat
+	background-size cover
+	background-position center center
+
+// text
+
+.ui-text-center
+	text-align center
+
+.ui-small
+	font-size 70%

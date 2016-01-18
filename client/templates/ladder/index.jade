@@ -1,0 +1,68 @@
+template(name='ladder')
+
+	with topOneUser
+		.ui-flex-row.ui-flex-center--child.ui-mgtb-lg
+			.ui-flex-1x
+
+			.ui-flex-row.ui-flex-3x.ui-flex-center--child
+				.ui-padded
+					h1 ${{bidAbbr}}
+				.ui-padded
+					img.ui-circle(src='{{profile.avatarUrl}}' width='140' height='140')
+				.ui-flex-1x.ui-padded.ui-flex-left--child
+					.ui-flex-column
+						h4.ui-mgb-sm {{displayName}}
+							small.ui-mute @{{username}}
+						.ui-mgb {{profile.quote}}
+						.ui-flex-row
+							.ui-mgr
+								i.fa.fa-facebook-official
+									sup {{stats.riches}}
+							.ui-mgr
+								i.fa.fa-facebook-official
+							.ui-mgr
+								i.fa.fa-twitter
+							.ui-mgr
+								i.fa.fa-instagram
+
+			.ui-flex-1x
+
+	.ui-flex-row.ui-flex-wrap--2.ui-mgtb-lg
+		each topTwoUsers
+			.ui-flex-row.ui-flex-3x.ui-flex-center--child.ui-padded
+				.ui-padded
+					a(href='{{pathFor route="$username"}}')
+						img.ui-circle(src='{{profile.avatarUrl}}' width='120' height='120')
+				.ui-flex-1x.ui-padded.ui-flex-left--child
+					.ui-flex-column
+						.ui-flex-row.ui-mgb-sm
+							h4.ui-flex-1x {{displayName}}
+								small.ui-mute @{{username}}
+							h4.ui-mgr-md ${{bidAbbr}}
+						.ui-flex-row.ui-mgb {{profile.quote}}
+						.ui-flex-row
+							.ui-mgr
+								i.fa.fa-facebook-official
+							.ui-mgr
+								i.fa.fa-twitter
+							.ui-mgr
+								i.fa.fa-instagram
+
+	.ui-flex-row.ui-flex-wrap--3.ui-mgtb-lg
+		each topThreeUsers
+			.ui-flex-row.ui-flex-3x.ui-flex-center--child
+				.ui-flex-column.ui-padded(style='padding-top: 0;')
+					img.ui-mgb.ui-circle(src='{{profile.avatarUrl}}' width='100' height='100')
+					h4 ${{bidAbbr}}
+				.ui-flex-1x.ui-padded.ui-flex-left--child
+					.ui-flex-column
+						h4.ui-mgb-sm {{displayName}}
+							small.ui-mute @{{username}}
+						.ui-mgb {{profile.quote}}
+						.ui-flex-row
+							.ui-mgr
+								i.fa.fa-facebook-official
+							.ui-mgr
+								i.fa.fa-twitter
+							.ui-mgr
+								i.fa.fa-instagram

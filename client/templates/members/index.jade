@@ -1,0 +1,57 @@
+template(name='members')
+
+	h4.ui-padded Most Followers
+
+	.ui-flex-row.ui-flex-wrap--8.ui-flex-center--child
+
+		each mostFollowersUsers 24
+
+			a.ui-flex-column.ui-padded(href='{{pathFor route="$username"}}')
+
+				img.ui-mgb.ui-circle(src='{{profile.avatarUrl}}' width='50' height='50')
+
+				small(style='font-size: 70%; white-space: nowrap;') {{displayName}}
+
+				small {{followersAbbr}}
+
+	h4.ui-padded Most Followings
+
+	.ui-flex-row.ui-flex-wrap--8.ui-flex-center--child
+
+		each mostFollowingsUsers 24
+
+			a.ui-flex-column.ui-padded(href='{{pathFor route="$username"}}')
+
+				img.ui-mgb.ui-circle(src='{{profile.avatarUrl}}' width='50' height='50')
+
+				small(style='font-size: 70%; white-space: nowrap;') {{displayName}}
+
+				small {{followingsAbbr}}
+
+	h4.ui-padded Most activities
+
+	.ui-flex-row.ui-flex-wrap--8.ui-flex-center--child
+
+		each mostActivitiesUsers 24
+
+			a.ui-flex-column.ui-padded(href='{{pathFor route="$username"}}')
+
+				img.ui-mgb.ui-circle(src='{{profile.avatarUrl}}' width='50' height='50')
+
+				small(style='font-size: 70%; white-space: nowrap;') {{displayName}}
+
+				small {{activitiesAbbr}}
+
+	h4.ui-padded Latest members
+
+	.ui-flex-row.ui-flex-wrap--8.ui-flex-center--child
+
+		each latestUsers 24
+
+			a.ui-flex-column.ui-padded(href='{{pathFor route="$username"}}')
+
+				img.ui-mgb.ui-circle(src='{{profile.avatarUrl}}' width='50' height='50')
+
+				small(style='font-size: 70%; white-space: nowrap;') {{displayName}}
+
+				small {{createdAtFromNow}}

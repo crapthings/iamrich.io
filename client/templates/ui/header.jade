@@ -1,0 +1,28 @@
+template(name='ui_header')
+
+	.ui-flex-row.ui-flex-center--child.ui-header
+
+		.ui-flex-1x(style='font-size: 14px;')
+			unless currentUser
+				a(href='{{pathFor route="signin"}}') Sign In
+			else
+				a(href='{{pathFor route="my"}}') {{currentUser.username}}
+
+		.ui-flex-1x
+			a(href='{{pathFor route="home"}}') I AM RICH
+
+		.ui-flex-1x(style='font-size: 14px;')
+
+			a(href='{{pathFor route="ladder"}}') Ladder
+
+			a(href='{{pathFor route="activities"}}') Activities
+
+			a(href='{{pathFor route="members"}}') Members
+
+			a(href='{{pathFor route="members"}}') Groups
+
+			a(href='{{pathFor route="members"}}') Gallery
+
+			if currentUser
+				a(href='#' onclick='Meteor.signout("home");')
+					i.fa.fa-sign-out

@@ -1,0 +1,54 @@
+template(name='signup')
+
+	.ui-padded-lg
+
+		.ui-text-center.ui-mgb
+			h3.ui-mgb Membership
+
+			p {{system.membership}}
+
+	.ui-flex-row
+
+		.ui-flex-1x
+
+			form.ui-flex-column.ui-padded-sm(action='' method='POST')#payment-form
+
+				script(src='https://checkout.stripe.com/checkout.js' class='stripe-button' data-key='pk_test_WADr6oVoBZ4BGTw2b6D0TCN4' data-amount='2000' data-name='Demo Site' data-description='2 widgets ($20.00)' data-image='/128x128.png')
+
+				.ui-padded-sm
+					input(type='text' placeholder='Username').data-user-username
+
+				.ui-padded-sm
+					input(type='email' placeholder='Email').data-user-email
+
+				.ui-padded-sm
+					input(type='password' placeholder='Password').data-user-password
+
+				.ui-padded-sm
+					input(type='text' data-stripe='number' placeholder='Card Number 4242424242424242')
+
+				.ui-flex-row
+					.ui-flex-1x.ui-padded-sm
+						input(type='text' data-stripe='exp-month' placeholder='MM')
+					.ui-flex-1x.ui-padded-sm
+						input(type='text' data-stripe='exp-year' placeholder='YYYY')
+					.ui-flex-1x.ui-padded-sm
+						input(type='text' data-stripe='cvv' placeholder='CVV')
+
+				.ui-padded-sm
+					input(type='submit' value='Sign Up')
+
+		.ui-flex-column.ui-flex-1x.ui-flex-center--child
+			.ui-flex-1x
+
+			.ui-flex-column.ui-flex-1x
+				h1 $1000.00
+				small.ui-mute PER MONTH
+
+			.ui-flex-row.ui-flex-2x.ui-flex-center--child
+				.ui-flex-1x
+					span spot
+				.ui-flex-1x
+					span spot
+				.ui-flex-1x
+					span spot

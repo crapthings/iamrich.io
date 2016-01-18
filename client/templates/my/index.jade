@@ -1,0 +1,36 @@
+template(name='my')
+
+	.ui-flex-row
+
+		.ui-flex-column.ui-flex-1x
+
+			.ui-flex-row.ui-padded
+
+				.ui-flex-column.ui-flex-1x
+					small riches
+					h4 200
+
+				.ui-flex-column.ui-flex-1x
+					small fellas
+					h4 120
+
+				.ui-flex-column.ui-flex-1x
+					small opportunities
+					h4 210
+
+		.ui-flex-column.ui-flex-2x
+
+			.ui-flex-column.ui-padded
+				input(type='text')
+
+			each riches
+
+				.ui-flex-row.ui-padded
+
+					img.ui-mgr.ui-circle(src='https://pbs.twimg.com/profile_images/2384137649/fjhvw36fqmbpy7w63xyt_bigger.jpeg' width='50' height='50')
+
+					.ui-flex-column.ui-flex-1x
+						h5 displayName @username · 3m
+						p {{content}}
+
+		.ui-flex-1x

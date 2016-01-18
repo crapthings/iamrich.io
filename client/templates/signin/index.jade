@@ -1,0 +1,15 @@
+template(name='signin')
+
+	form.ui-flex-column.ui-padded-sm
+
+		.ui-padded-sm
+			input(type='text' placeholder='Email or username' autofocus).data-user-email
+
+		.ui-padded-sm
+			input(type='password' placeholder='Password').data-user-password
+
+		.ui-padded-sm
+			input(type='submit' value='Sign In')
+
+		.ui-padded-sm
+			input(type='button' value='Sign Up' onclick='Router.go("signup");')

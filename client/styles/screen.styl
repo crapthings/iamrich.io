@@ -1,0 +1,59 @@
+$headerHeight = 50px
+$textColor = #666
+
+*
+	outline none
+
+body
+	font-family 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Arial', 'Verdana', 'sans-serif'
+	font-size 18px
+	font-weight 400
+	line-height 1.45
+
+	color $textColor
+
+a
+	text-decoration none
+
+	color $textColor
+
+input
+	width 100%
+	padding 8px
+	border 1px solid #efefef
+
+input[type='submit']
+	background-color green
+	color white
+	border 0
+
+input[type='button']
+	background-color #efefef
+	border 0
+
+.ui-mute
+	color #999
+
+.ui-header
+	position fixed
+	z-index 999
+	top 0
+	left 0
+	width 100%
+	height $headerHeight
+	border-bottom 1px solid #efefef
+	background-color white
+
+	& a
+		padding 0 16px
+
+.ui-main
+	padding-top 50px
+
+.ui-footer
+	padding 16px 0
+	background-color #efefef
+	font-size 70%
+	& a
+		padding 0 16px
+		color #999
